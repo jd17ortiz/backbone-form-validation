@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+	<section class="form-container">
+
+	</section>
+	
+	<!-- Template to show form -->
+	<!-- Begin template -->
+	<script type="text/templaye" id="user-form-template">
+		<div class="status-app">
+			<p class="message"></p>
+		</div>
+		<div class="row-container">
+			<div class="row">
+				<label class="title-label" for="first_name">First name</label>
+				<input class="form-control" type="text" placeholder="Your first name" name="first_name" id="first_name">
+				<div class="error-msg"></div>
+			</div>
+			<div class="row">
+				<label class="title-label" for="last_name">Last name</label>
+				<input class="form-control" type="text" placeholder="Your last name" name="last_name" id="last_name">
+				<div class="error-msg"></div>
+			</div>
+			<div class="row">
+				<label class="title-label" for="position">Position</label>
+				<input class="form-control" type="text" placeholder="Your current position" name="position" id="position">
+			</div>
+			<div class="row">
+				<label class="title-label" for="company">Company</label>
+				<input class="form-control" type="text" placeholder="Your company" name="company" id="company">
+			</div>
+			<div class="row">
+				<label class="title-label" for="email">Email</label>
+				<input class="form-control" type="email" placeholder="Your email" name="email" id="email">
+				<div class="error-msg"></div>
+			</div>
+			<div class="row">
+				<label class="title-label" for="phone">Phone</label>
+				<input class="form-control" type="text" placeholder="Your phone" name="phone"  id="phone">
+			</div>
+			<div class="row">
+				<label class="title-label" for="region">Region</label>
+				<select class="form-control" placeholder="Region where you're localize" name="region" id="region">
+					<option value="0" selected="selected">Select your region</option>
+					<option value="Europe">Europe</option>
+					<option value="North America">North America</option>
+					<option value="Asia">Asia</option>
+					<option value="Australia and New Zealand">Australia and New Zealand</option>
+					<option value="South America">South America</option>
+					<option value="Africa">Africa</option>
+				</select>
+				<div class="error-msg"></div>
+			</div>
+			<div class="row">
+				<label class="title-label" for="software">Software to be demonstrated</label>
+				<div class="group-radio">
+					<label>
+						<input type="radio" name="software" value="ideaStream">IdeaStream&trade;
+					</label>
+					<label>
+						<input type="radio" name="software" value="HeadsUp">HeadsUp&trade;
+					</label>
+				</div>
+				<div class="error-msg"></div>
+			</div>
+			<div class="row">
+				<label class="title-label">A good time for the demo <span class="litle-text">(let us know up to three suitable times for us to organise a demo)</span></label>
+				<div class="row-select-container">
+					<div class="row-select">
+						<select class="form-control times" name="times">
+							<option value="0" selected="selected">Select a time</option>
+							<option value="Anytime">Anytime</option>
+							<option value="AM only">AM only</option>
+							<option value="PM only">PM only</option>
+							<option value="9-10am">9-10am</option>
+							<option value="10-11am">10-11am</option>
+							<option value="12-1pm">12-1pm</option>
+							<option value="1-2pm">1-2pm</option>
+							<option value="3-4pm">3-4pm</option>
+							<option value="4-5pm">4-5pm</option>
+							<option value="5-6pm">5-6pm</option>
+						</select>
+					</div>	
+					<div class="row-select">
+						<select class="form-control timezones" name="timezones">
+							<option value="0" selected="selected">Your timezone</option>
+							<option value="GMT">GMT</option>
+							<option value="CET">CET</option>
+							<option value="EET">EET</option>
+							<option value="EST">EST</option>
+							<option value="CST">CST</option>
+							<option value="MST">MST</option>
+							<option value="PST">PST</option>
+							<option value="WST">WST</option>
+							<option value="ACST">ACST</option>
+							<option value="AEST">AEST</option>
+						</select>
+					</div>		
+					<div class="row-select">
+						<select class="form-control dates" name="dates">
+							<option value="0" selected="selected">Select a day</option>
+							<option value="Tomorrow and the next 3 days">Tomorrow and the next 3 days</option>
+						</select>
+					</div>
+				</div>
+				<a class="add-icon"></a>
+			</div>
+
+			<div class="row">
+				<label class="title-label" for="notes">Anything else we should know</label>
+				<textarea name="notes" placeholder="Write your comments" id="notes" cols="40" rows="5"></textarea>
+			</div>
+			<div class="row submit-btn">
+				<button type="button" id="signUpButton" class="btn sign-up">Sign Up</button>
+			</div>
+		</div>
+	</script>
+	<!-- End template -->
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/underscore.js"></script>
+	<script src="js/vendor/backbone.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/backbone/models/user.js"></script>
+	<script src="js/backbone/views/user-view.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
